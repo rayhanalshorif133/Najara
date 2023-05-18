@@ -1,0 +1,22 @@
+.fs-1{
+    font-size: 1rem;
+}
+.fs-2{
+    font-size: 2rem;
+}
+.category_title{
+    display: flex!important;
+    justify-content: space-between;
+}
+.category_title a{
+    color: #fff;
+    font-weight: 600;
+    align-content: center;
+    margin: 5px;
+    display: flex;
+}
+..category_title a:hover{
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $title = "Home";
         $categories = Category::where('parent_id', 0)->get();
 
         $contentInfos = ContentSlug::select('id','title','status')
@@ -20,6 +21,6 @@ class HomeController extends Controller
         }
 
         
-        return view('home', compact('categories','contentInfos'));
+        return view('home', compact('categories','contentInfos','title'));
     }
 }

@@ -1,8 +1,8 @@
 <section id="search-panel">
     <div class="search-body">
-        <form class="example" action="/action_page.php">
+        <form class="example" action=";javascript">
             <input type="text" placeholder="Search here" name="search">
-            <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+            <button type="button" class="search-btn"><i class="fa fa-search"></i></button>
         </form>
     </div>
 </section>

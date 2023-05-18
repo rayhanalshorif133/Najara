@@ -27,10 +27,11 @@ class CategorySeeder extends Seeder
             'Fun',
         ];
 
+        $contentSeed = new ContentSeeder();
         foreach ($names as $name) {
             Category::create([
                 'name' => $name,
-                'slug' => \Illuminate\Support\Str::slug($name),
+                'icon' => $contentSeed->getImage(),
             ]);
         }
     }

@@ -4,9 +4,9 @@
                 <div class="col-12 sm-12"> 
                     <div class="footer-part">
                         <ul class="text-center d-block">
-                            <li><a href="#">Home</a>  </li>
-                            <li><a href="#">My account</a> </li>
-                            <li><a href="#">Help</a>  </li>
+                            <li><a href="{{route('home')}}">Home</a>  </li>
+                            <li><a href="{{route('account.index')}}">My account</a> </li>
+                            <li><a href="{{route('help.index')}}">Help</a>  </li>
                         </ul>
                     </div>
                 </div>

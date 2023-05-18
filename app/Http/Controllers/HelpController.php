@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class HelpController extends Controller
 {
+    
     public function index()
     {
         $categories = Category::where('parent_id', 0)->get();
-        $title = 'Category';
-        return view('category.index', compact('categories', 'title'));
+        $title = 'Help';
+        return view('help.index', compact('categories', 'title'));
     }
 }
