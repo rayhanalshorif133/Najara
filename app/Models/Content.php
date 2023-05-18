@@ -11,8 +11,14 @@ class Content extends Model
 
     protected $fillable = [
         'category_id',
+        'content_slug_id',
         'title',
         'description',
         'image'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

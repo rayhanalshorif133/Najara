@@ -13,4 +13,10 @@ class ContentSlug extends Model
         'title',
         'status'
     ];
+
+
+    public function contents()
+    {
+        return $this->hasMany(Content::class);
+    }
 }
