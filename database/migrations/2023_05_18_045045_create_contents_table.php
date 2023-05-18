@@ -17,6 +17,7 @@ class CreateContentsTable extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('content_slug_id')->constrained('content_slugs');
             $table->string('title', 255);
             $table->string('description', 255)->nullable();
             $table->string('image', 255)->nullable();
