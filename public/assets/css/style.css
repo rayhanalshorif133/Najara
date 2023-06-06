@@ -1,10 +1,12 @@
 @import './custom.css';
-body{
-	font-family: 'Poppins', sans-serif;
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
+
 .logo-panel {
-	margin-top: 90px;
-	margin-bottom: 135px;
+  margin-top: 90px;
+  margin-bottom: 135px;
 }
 
 p,
@@ -12,7 +14,7 @@ a,
 li,
 span,
 label {
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1,
@@ -21,24 +23,29 @@ h3,
 h4,
 h5,
 h6 {
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-ul li{
-	list-style-type: none;
+
+ul li {
+  list-style-type: none;
 }
 
 
 /**********************/
 /* search css */
 
-.search-body{
-    border: #fff solid 1px;
-    border-radius: 25px;
-    background-color: #ff3600;
-    margin: 0px 0 10px 0;
+.search-body {
+  border: #fff solid 1px;
+  border-radius: 25px;
+  background-color: #ff3600;
+  margin: 0px 0 10px 0;
 }
+
+
+
+.search_container input[type=text],
 form.example input[type=text] {
-  padding:5px 5px 5px 25px;
+  padding: 5px 5px 5px 25px;
   font-size: 17px;
   border: 1px solid #ff3600;
   float: left;
@@ -47,6 +54,7 @@ form.example input[type=text] {
   color: #000;
 }
 
+.search_container button,
 form.example button {
   float: left;
   width: 15%;
@@ -61,123 +69,143 @@ form.example button {
     left: -21px; */
 }
 
+.search_container button:hover,
 form.example button:hover {
   background: #ff3600;
 }
 
+.search_container::after,
 form.example::after {
   content: "";
   clear: both;
   display: table;
 }
 
-#subscribe-panel .btn-color{
-	background-color: #ec0000;
-	color: #fff;
-	font-weight: 600;
+#subscribe-panel .btn-color {
+  background-color: #ec0000;
+  color: #fff;
+  font-weight: 600;
 }
 
-#game-panel .game-part ul{
-    margin: 0 0 6% 0;
+#game-panel .game-part ul {
+  margin: 0 0 6% 0;
 }
-#game-panel .game-part ul li{
-	border-bottom: #ccc solid 1px;
-    padding: 2% 0px 1% 0px;
+
+#game-panel .game-part ul li {
+  border-bottom: #ccc solid 1px;
+  padding: 2% 0px 1% 0px;
 }
+
 #game-panel img.item.img-fluid {
-    width: 88%;
-}
-#game-panel .game-part ul li:last-child{
-	border-bottom: none;
+  width: 88%;
 }
 
-.game-part figure{
-	padding: 0px;
-	margin: 0px 0 7% 0;
+#game-panel .game-part ul li:last-child {
+  border-bottom: none;
 }
-#game-panel h2.game-title{
-	font-size: calc(1.1rem + 1.1vw);
-	display: block;
-	background-color: #ff3600;
-	padding: 5px 10px;
-	color: #fff;
-	border-radius: 10px 10px 0px 0px;
+
+.game-part figure {
+  padding: 0px;
+  margin: 0px 0 7% 0;
 }
-#game-panel h4.game-name{
-	font-size: calc(1rem + 1vw);
-	margin-bottom: 1%;
+
+#game-panel h2.game-title {
+  font-size: calc(1.1rem + 1.1vw);
+  display: block;
+  background-color: #ff3600;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 10px 10px 0px 0px;
 }
-.game-category p{
-	margin-bottom: 3%;
+
+#game-panel h4.game-name {
+  font-size: calc(1rem + 1vw);
+  margin-bottom: 1%;
 }
-.game-download a.download-btn{
-	background-color: #ec0000;
-	color: #fff;
-	padding: 5px 20px;
-	font-size: calc(0.7rem + 1vw);
+
+.game-category p {
+  margin-bottom: 3%;
 }
-#game-panel .game-part ul{
-	margin: 0px;
-	padding: 0px;
+
+.game-download a.download-btn {
+  background-color: #ec0000;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: calc(0.7rem + 1vw);
 }
-#game-panel .game-part ul li a.more-text{
-	color: #000;
+
+#game-panel .game-part ul {
+  margin: 0px;
+  padding: 0px;
 }
-#game-panel .category-part  ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    margin: 2% auto;
-	text-align: center;
+
+#game-panel .game-part ul li a.more-text {
+  color: #000;
 }
-#game-panel .category-part  ul li {
-    display: inline;
-    border-right: #000 solid 1px;
-    margin: 0 5px 0 2px;
-    line-height: 38px;
+
+#game-panel .category-part ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 2% auto;
+  text-align: center;
 }
-#game-panel .category-part  ul li:last-child{
-	border-right: none;
+
+#game-panel .category-part ul li {
+  display: inline;
+  border-right: #000 solid 1px;
+  margin: 0 5px 0 2px;
+  line-height: 38px;
 }
-#game-panel .category-part  ul li a{
-	font-size: calc(0.7rem + 0.8vw);
-	color: #000;
+
+#game-panel .category-part ul li:last-child {
+  border-right: none;
 }
+
+#game-panel .category-part ul li a {
+  font-size: calc(0.7rem + 0.8vw);
+  color: #000;
+}
+
 /* ======================================Footer css */
-  #footer-menu-panel{
-	background-color: #bd0000;
-  }
-  #footer-menu-panel .footer-part  ul {
-   margin: 0px;
-   padding: 0px;
-} 
-#footer-menu-panel .footer-part  ul li {
-    display: inline;
-    border-right: #fff solid 1px;
-    margin: 0 5px 0 2px;
-    line-height: 38px;
+#footer-menu-panel {
+  background-color: #bd0000;
 }
-  #footer-menu-panel .footer-part  ul li:last-child{
-	border-right: none;
+
+#footer-menu-panel .footer-part ul {
+  margin: 0px;
+  padding: 0px;
 }
-  #footer-menu-panel .footer-part  ul li a{
-	font-size: calc(0.7rem + 1vw);
-	color: #fff;
-} 
+
+#footer-menu-panel .footer-part ul li {
+  display: inline;
+  border-right: #fff solid 1px;
+  margin: 0 5px 0 2px;
+  line-height: 38px;
+}
+
+#footer-menu-panel .footer-part ul li:last-child {
+  border-right: none;
+}
+
+#footer-menu-panel .footer-part ul li a {
+  font-size: calc(0.7rem + 1vw);
+  color: #fff;
+}
+
 /* ================================Custom Responsive ============================= */
-@media screen and (max-width: 1280px) {
-}
-@media screen and (max-width: 1024px) {
-}
-@media screen and (max-width: 920px) {
-}
-@media screen and (max-width: 860px) {
-}
-@media screen and (max-width: 769px) {
-}
-@media screen and (max-width: 420px) {
-}
-@media screen and (max-width:390px) {
-}
-@media screen and (max-width:360px) {
-}
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 920px) {}
+
+@media screen and (max-width: 860px) {}
+
+@media screen and (max-width: 769px) {}
+
+@media screen and (max-width: 420px) {}
+
+@media screen and (max-width:390px) {}
+
+@media screen and (max-width:360px) {}

@@ -7,37 +7,43 @@
     <!-- Subscribe btn -->
     <section id="game-panel" style="margin-top:45px">
         <h2 class="game-title">Search Results</h2>
-        @foreach ($contentInfos as $key => $contentInfo)
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 sm-12">
-                        <div class="game-part">
-                            <ul>
-                                <li>
-                                    <div class="row row-cols-1 row-cols-sm-2">
-                                        <div class="col-4">
-                                            <figure>
-                                                <img src="{{ asset('assets/images/game-1.png') }}" alt=""
-                                                    title="" class="item img-fluid">
-                                            </figure>
-                                        </div>
-                                        <div class="col-8">
-                                            <h4 class="game-name">Adommo Ekattor</h4>
-                                            <div class="game-category">
-                                                <p>[Fun]</p>
+        @if (count($contentInfos) > 0)
+            @foreach ($contentInfos as $key => $content)
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 sm-12">
+                            <div class="game-part">
+                                <ul>
+                                    <li>
+                                        <div class="row row-cols-1 row-cols-sm-2">
+                                            <div class="col-4">
+                                                <figure>
+                                                    <img src="{{ asset($content->image) }}" alt="" title=""
+                                                        class="item img-fluid">
+                                                </figure>
                                             </div>
-                                            <div class="game-download">
-                                                <a href="" class="download-btn">Download</a>
+                                            <div class="col-8">
+                                                <h4 class="game-name">{{ $content->title }}</h4>
+                                                <div class="game-category">
+                                                    <p>[{{ $content->category->name }}]</p>
+                                                </div>
+                                                <div class="game-download">
+                                                    <a href="#" class="download-btn">Download</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @else
+            <p class="text-center m-auto h5 mt-3">
+                No results found for <span style="color: #ff0000;">{{ $search_key }}</span>
+            </p>
+        @endif
     </section>
 @endsection
 

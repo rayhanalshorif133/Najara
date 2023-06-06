@@ -1,9 +1,9 @@
 <section id="search-panel">
     <div class="search-body">
-        <form class="example" action=";javascript">
+        <div class="search_container" action=";javascript">
             <input type="text" placeholder="Search here" name="search">
             <button type="button" class="search-btn"><i class="fa fa-search"></i></button>
-        </form>
+        </div>
     </div>
 </section>
 <!-- Search panel -->
@@ -11,8 +11,10 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 sm-12">
-                <strong style=" font-size: calc(1rem + 1vw);" class="text-center d-block"> Welcome to Game
-                    club</strong>
+                <a href="{{ route('home') }}" style="color:black">
+                    <strong style=" font-size: calc(1rem + 1vw);" class="text-center d-block"> Welcome to Game
+                        club</strong>
+                </a>
             </div>
         </div>
     </div>

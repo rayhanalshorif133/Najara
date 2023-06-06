@@ -10,19 +10,23 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     //
-    public function search($search_key)
+    public function search($search_key = null)
     {
+
+
+        if ($search_key == null) {
+            return redirect()->route('home');
+        }
+
         $title = "Search";
         $categories = Category::where('parent_id', 0)->get();
 
         $contentInfos = Content::select('*')
             ->where('title', 'like', '%' . $search_key . '%')
             ->with('category', 'ContentSlug')
-            ->take(5)
             ->get();
 
 
-
-        return view('search.index', compact('categories', 'contentInfos', 'title'));
+        return view('search.index', compact('categories', 'contentInfos', 'title', 'search_key'));
     }
 }

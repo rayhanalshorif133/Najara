@@ -2111,18 +2111,19 @@ $(function () {
   handleSearch();
 });
 var handleSearch = function handleSearch() {
+  // if press enter key
+  $("input[name='search']").keypress(function (e) {
+    if (e.which == 13) {
+      var search = $("input[name='search']").val();
+      if (search != "") {
+        location.href = "/search/" + search;
+      }
+    }
+  });
   $(".search-btn").click(function () {
     var search = $("input[name='search']").val();
     if (search != "") {
-      var gameNames = $(".game-name");
-      gameNames.each(function (item, index) {
-        var li = $(this).parent().parent().parent();
-        if ($(this).text().toLowerCase().indexOf(search.toLowerCase()) == -1) {
-          li.hide();
-        } else {
-          li.show();
-        }
-      });
+      location.href = "/search/" + search;
     }
   });
   $("input[name='search']").keyup(function () {
