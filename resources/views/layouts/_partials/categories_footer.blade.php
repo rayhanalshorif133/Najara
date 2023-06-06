@@ -2,7 +2,7 @@
     <h2 class="game-title category_title">
         <span>Categories</span>
         <span class="fs-1">
-            <a href="{{route('category.index')}}">
+            <a href="{{ route('category.index') }}">
                 See More
             </a>
         </span>
@@ -13,7 +13,7 @@
                 <div class="category-part">
                     <ul>
                         @foreach ($categories as $category)
-                        <li><a href="#">{{$category->name}}</a> </li>
+                            <li><a href="{{ route('category.selected', $category->id) }}">{{ $category->name }}</a> </li>
                         @endforeach
                     </ul>
                 </div>

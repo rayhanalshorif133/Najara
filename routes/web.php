@@ -31,6 +31,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Category
 Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/category/{id}', [CategoryController::class, 'category_selected'])
+    ->name('category.selected');
 
 // Account
 Route::get('/account', [AccountController::class, 'index'])->name('account.index');
