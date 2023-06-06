@@ -21,4 +21,9 @@ class Content extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function contentSlug()
+    {
+        return $this->belongsTo(ContentSlug::class);
+    }
 }

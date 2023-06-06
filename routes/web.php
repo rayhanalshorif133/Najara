@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,9 @@ Route::get('/category', [CategoryController::class, 'index'])->name('category.in
 
 // Account
 Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+
+// Search
+Route::get('/search/{search_key?}', [SearchController::class, 'search'])->name('search');
 
 // Help
 Route::get('/help', [HelpController::class, 'index'])->name('help.index');
