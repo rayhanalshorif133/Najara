@@ -17,18 +17,24 @@
                                     <li>
                                         <div class="row row-cols-1 row-cols-sm-2">
                                             <div class="col-4">
+                                                @php
+                                                    $img_name = $content->preview_img ? $content->preview_img : $content->screenshot1;
+                                                @endphp
                                                 <figure>
-                                                    <img src="{{ asset($content->image) }}" alt="" title=""
-                                                        class="item img-fluid">
+                                                    <img src="{{ $content->GET_IMAGE($content->id, $img_name) }}"
+                                                        alt="" title="" class="item img-fluid">
                                                 </figure>
                                             </div>
                                             <div class="col-8">
-                                                <h4 class="game-name">{{ $content->title }}</h4>
+                                                <h4 class="game-name">{{ $content->game_name }}</h4>
                                                 <div class="game-category">
                                                     <p>[{{ $content->category->name }}]</p>
                                                 </div>
                                                 <div class="game-download">
-                                                    <a href="#" class="download-btn">Download</a>
+                                                    <a href="{{ $content->html5_url }}" target="_blank"
+                                                        class="download-btn">
+                                                        Play Now
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -42,6 +48,12 @@
         @else
             <p class="text-center m-auto h5 mt-3">
                 No results found for <span style="color: #ff0000;">{{ $search_key }}</span>
+
+                {{-- Home Btn --}}
+                <br />
+                <a href="{{ route('home') }}" class="btn btn-outline-danger btn-sm mt-3">
+                    Home
+                </a>
             </p>
         @endif
     </section>

@@ -193,6 +193,17 @@ form.example::after {
   color: #fff;
 }
 
+.btn-outline-danger {
+  color: #FF3600;
+  border-color: #FF3600;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #FF3600;
+  border-color: #fff;
+}
+
 /* ================================Custom Responsive ============================= */
 @media screen and (max-width: 1280px) {}
 
