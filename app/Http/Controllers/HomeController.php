@@ -19,6 +19,7 @@ class HomeController extends Controller
         $contentInfos = CMSAddGame::select('type')
             ->where('status', 1)
             ->where('type', 'HTML5')
+            ->with('category')
             ->groupBy('type')
             ->get();
 

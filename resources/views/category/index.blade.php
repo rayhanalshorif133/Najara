@@ -43,7 +43,3 @@
     </section>
     <!-- HTML 5 Game -->
 @endsection
-
-@push('scripts')
-    <script></script>
-@endpush

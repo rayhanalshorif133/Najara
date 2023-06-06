@@ -31,8 +31,7 @@
                                                     <p>[{{ $content->category->name }}]</p>
                                                 </div>
                                                 <div class="game-download">
-                                                    <a href="{{ $content->html5_url }}" target="_blank"
-                                                        class="download-btn">
+                                                    <a href="{{ $content->html5_url }}" class="download-btn">
                                                         Play Now
                                                     </a>
                                                 </div>
@@ -58,7 +57,3 @@
         @endif
     </section>
 @endsection
-
-@push('scripts')
-    <script></script>
-@endpush
