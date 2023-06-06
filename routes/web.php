@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\HelpController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +24,15 @@ Route::get('command', function () {
 });
 
 
-foreach (glob(base_path('routes/public/*.php')) as $route) {
-    require_once $route;
-}
+// Home 
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+// Category
+Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+
+// Account
+Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+
+// Help
+Route::get('/help', [HelpController::class, 'index'])->name('help.index');
