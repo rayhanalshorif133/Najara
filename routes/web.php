@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -42,3 +43,7 @@ Route::get('/search/{search_key?}', [SearchController::class, 'search'])->name('
 
 // Help
 Route::get('/help', [HelpController::class, 'index'])->name('help.index');
+
+
+// Play Game
+Route::get('/play/{id}', [GameController::class, 'playGame'])->name('play.game');

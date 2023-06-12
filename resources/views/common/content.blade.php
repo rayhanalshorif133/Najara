@@ -21,7 +21,10 @@
                                          <p>[{{ $content->category->name }}]</p>
                                      </div>
                                      <div class="game-download">
-                                         <a href="{{ $content->html5_url }}" class="download-btn">
+                                         {{-- <a href="{{ $content->html5_url }}" class="download-btn">
+                                             Play Now
+                                         </a> --}}
+                                         <a href="{{ route('play.game', $content->id) }}" class="download-btn">
                                              Play Now
                                          </a>
                                      </div>
